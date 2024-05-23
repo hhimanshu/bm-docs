@@ -23,6 +23,16 @@ export default defineConfig({
         {
           label: "Data Model",
           autogenerate: { directory: "data-model" },
+          items: [
+            {
+              label: "Search",
+              autogenerate: { directory: "data-model/search" },
+            },
+            {
+              label: "BetterMenu",
+              autogenerate: { directory: "data-model/bettermenu" },
+            },
+          ],
         },
       ],
     }),
