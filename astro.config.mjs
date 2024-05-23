@@ -10,7 +10,7 @@ export default defineConfig({
 				// github: 'https://github.com/bettermenu/documentation',
 			},
 			editLink: {
-				baseUrl: 'https://github.com/bettermenu/documentation/edit/main/docs/'
+				baseUrl: 'https://github.com/bettermenu/documentation/edit/main'
 			},
 			logo: {
 				light: './src/assets/bm-light.svg',
