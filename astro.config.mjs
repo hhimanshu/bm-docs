@@ -5,9 +5,18 @@ import starlight from '@astrojs/starlight';
 export default defineConfig({
 	integrations: [
 		starlight({
-			title: 'My Docs',
+			title: 'BetterMenu Docs',
 			social: {
-				github: 'https://github.com/withastro/starlight',
+				// github: 'https://github.com/bettermenu/documentation',
+			},
+			editLink: {
+				baseUrl: 'https://github.com/bettermenu/documentation/edit/main/docs/'
+			},
+			logo: {
+				light: './src/assets/bm-light.svg',
+				dark: './src/assets/bm-dark.svg',
+				alt: 'BetterMenu Docs',
+				replacesTitle: true,
 			},
 			sidebar: [
 				{
