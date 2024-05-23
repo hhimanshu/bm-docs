@@ -21,8 +21,8 @@ export default defineConfig({
       sidebar: [
         { label: "Guides", autogenerate: { directory: "guides" } },
         {
-          label: "Reference",
-          autogenerate: { directory: "reference" },
+          label: "Data Model",
+          autogenerate: { directory: "data-model" },
         },
       ],
     }),
