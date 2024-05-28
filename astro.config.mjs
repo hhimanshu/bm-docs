@@ -15,7 +15,7 @@ export default defineConfig({
       logo: {
         light: "./src/assets/bm-light.svg",
         dark: "./src/assets/bm-dark.svg",
-        alt: "BetterMenu Docs",
+        alt: "BetterMenu Documentation Logo",
         replacesTitle: true,
       },
       sidebar: [
