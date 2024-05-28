@@ -19,7 +19,7 @@ export default defineConfig({
         replacesTitle: true,
       },
       sidebar: [
-        { label: "Guides", autogenerate: { directory: "guides" } },
+        { label: "Concepts", autogenerate: { directory: "concepts" } },
         {
           label: "Features",
           autogenerate: { directory: "features" },
