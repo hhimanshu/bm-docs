@@ -1,0 +1,191 @@
+---
+title: Recipe
+---
+import { Aside } from '@astrojs/starlight/components';
+
+A Recipe is a combination of ingredients and instructions that are used to prepare a meal for consumption. Some observations about a recipe are:
+
+- A recipe can be as simple as a single ingredient or as complex as a dozen or more ingredients. 
+- A recipe can be as simple as a single step or as complex as a dozen or more steps. 
+- A recipe can be as simple as a single appliance or as complex as a dozen or more appliances. A recipe can be as quick as a few minutes or as long as a few hours.
+
+No matter how simple or complex a recipe is, it always have a combination of some of the following elements:
+
+
+### Ingredients
+
+A recipe may include as little as one [food](/concepts/food) or as many as a dozen or more. The amount of each food, combined with quantity and measurement unit is known as as [Ingredient](/concepts/ingredient).
+When following an online recipe, or a printed cookbook, these can be located under the heading "Ingredients". Some of the ingredients may be optional, or may have alternatives.
+
+An example of ingredients from a `Vegan Chickpea Salad` recipe could be:
+```
+- 1 can of chickpeas
+- 1/2 cup of diced red onion
+- 1/2 cup of diced cucumber
+- 1/2 cup of diced tomato
+- 1/4 cup of chopped parsley
+- 1/4 cup of chopped mint
+- 1/4 cup of olive oil
+- 1/4 cup of lemon juice
+- Salt and pepper to taste
+```
+
+Some of the key points to note about ingredients are:
+- The ingredient is typically written in one line with the following format: `<quantity> <unit> <food>`. For example, `1 cup chickpeas`.
+- The ingredient always starts with a quantity. The quantity is the amount of the ingredient that is used in the recipe. The quantity is typically a number, such as 1, 2, 1/2, 3 1/2 etc.
+- The quantity is followed by the unit of measurement. The unit of measurement is the unit in which the quantity is measured. Some of the common units of measurement are grams (g), milliliters (ml), cups, tablespoons, teaspoons, etc. The measurement units used in 
+different parts of the world may vary. For example, in the US, the measurement unit for volume is typically cups, tablespoons, and teaspoons, while in the UK, the measurement unit for volume is typically milliliters (ml) and liters (l). For more details, read [Cookbook:Units of measurement](https://en.wikibooks.org/wiki/Cookbook:Units_of_measurement)
+- The unit of measurement is followed by the food. The food is the ingredient that is used in the recipe. The food can be a single ingredient, such as chickpeas, or a combination of ingredients, such as chickpeas and red onion. The food is typically a noun, such as chickpeas, red onion, cucumber, tomato, etc.
+
+<Aside type="note">
+Need a separate page to explain ingredient, quantity and measurement unit in detail
+</Aside>
+
+### Instructions
+
+The *Instruction* is a single step in the process of preparing a recipe. The instructions are typically listed in the order in which they should be performed. When following an online recipe, or a printed cookbook, these can be located under the heading "Instructions".
+An example of instructions from a `Vegan Chickpea Salad` recipe could be:
+```
+1. Drain and rinse the chickpeas.
+2. In a large bowl, combine the chickpeas, red onion, cucumber, tomato, parsley, and mint.
+3. In a small bowl, whisk together the olive oil, lemon juice, salt, and pepper.
+4. Pour the dressing over the salad and toss to combine.
+5. Serve the salad immediately, or refrigerate for later.
+```
+
+### Yield
+In cooking, "Yield" refers to the total quantity of food produced by a recipe. The yield is usually measured in units such as:
+ 
+``` 
+Grams (g)
+Milliliters (mL) or fluid ounces (fl oz)
+Pounds (lb) or kilograms (kg)
+Cups (cups)
+```
+
+**Yield**.
+
+An example of yield from a `Vegan Chickpea Salad` recipe could be:
+```
+- Yield: 200 grams
+```
+
+Other examples of yield could be:
+```
+1 1/2 cups
+230 ml
+100 cookies
+```
+
+### Servings
+The servings is the number of people that the recipe is intended to serve. The servings can be as little as one person or as many as a dozen or more.
+
+An example of servings from a `Vegan Chickpea Salad` recipe could be:
+```
+- Servings: 4
+```
+
+### Yields vs Servings
+The key differences between Yield and Servings:
+  
+- **Measurement units:** Yield is measured in weight (grams, pounds) or volume (cups), while Servings are counted as numbers.
+- **Quantity vs. Portion size:** Yield represents the total amount of food prepared, whereas Servings indicate how many individual portions can be made from that yield.
+- **Purpose:** Yield helps you understand how much food to prepare, while Servings informs you about the number of people the dish will serve.
+ 
+To illustrate this difference:
+ 
+- A recipe with a *Yield* of 500g and *Servings*: 8 means you'll end up with 500g of prepared food that can be divided into 8 portions.
+- Another recipe might have a *Yield* of 300mL (1.25 cups) and *Servings*: 4, indicating you'll prepare 300mL of liquid or semi-liquid food that serves 4 people.
+
+### Amount Per Serving (APS)
+The "Amount per Serving" (APS) is used to express the quantity of food or ingredients per portion. APS is usually measured in the same units as the yield (e.g., grams, cups, etc.) and indicates how much of the total yield each serving contains.
+ 
+For example:
+- A recipe with a yield of 250g and APS: 35g per serving means that each serving contains approximately 35g of the prepared food.
+- Another recipe might have a yield of 1 cup (240mL) and APS: 2/3 cup per serving, indicating that each portion is roughly 2/3 cup.
+
+**Non-numeric Servings:**
+ 
+When the recipe yields a non-numeric quantity, such as cookies or pieces of food, you can express the amount per serving as a ratio or proportion. For example:
+- A cookie recipe with a yield of "20-25 cookies" and APS: 1/4 to 1/3 cookie per serving means that each serving is equivalent to one-quarter to one-third of a cookie.
+- Another recipe might produce "12-15 pieces" and APS: 2-3 pieces per serving, indicating that each portion contains two to three pieces of the prepared food.
+  
+In these cases, recipe's instructions could be used to determine an approximate quantity per serving. For instance, if a recipe yields 20 cookies and serves 4 people, you could estimate that each person gets about 5 cookies (APS: 5 cookies per serving).
+
+### Nutrition Facts
+Any recipe made for consumption contains a variety of nutrients. The nutrients are essential for the body to function properly. These  nutrients can be communicated in the form of a [Nutrition Facts](/concepts/nutrition-fact).
+
+An example of nutrition facts from a `Vegan Chickpea Salad` recipe could be:
+```
+- Calories: 200
+- Total Fat: 10g
+- Saturated Fat: 1g
+- Cholesterol: 0mg
+- Sodium: 200mg
+- Total Carbohydrates: 20g
+- Dietary Fiber: 5g
+- Protein: 5g
+```
+
+### Allergens
+Depending on the ingredients used in the recipe, the recipe may contain [allergens](/concepts/allergen). 
+
+An example of allergens from a `Vegan Chickpea Salad` recipe could be:
+```
+- Sesame seeds
+```
+
+### Dietary Restrictions
+Depending on the ingredients used in the recipe, the recipe may be suitable for people with specific [dietary preferences](/concepts/diet)
+
+### Claims
+Depending on the ingredients used in the recipe, the recipe may be make a [claim](/concepts/claim) about the food.
+
+An example of claims from a `Vegan Chickpea Salad` recipe could be:
+```
+- Vegan
+- Gluten-Free
+- Dairy-Free
+- High in Fiber
+- Low in Sodium
+```
+
+### Time
+
+The time is the duration it takes to prepare the food. The time can be as little as a few minutes or as long as a few hours. There are different types of time when creating a recipe. These are outlined below
+
+| Time Type | Description |
+| ---------------- | ---------------------------------------------------------- |
+| Preparation Time | The time it takes to prepare the ingredients before cooking |
+| Cooking Time | The time it takes to cook the food |
+| Total Time | The total time it takes to prepare the food from start to finish |
+
+
+An example of time from a `Vegan Chickpea Salad` recipe could be:
+```
+- Preparation Time: 15 minutes
+- Total Time: 15 minutes
+```
+Note, as there is no cooking involved in this recipe, the cooking time is not mentioned.
+
+
+### Appliances
+
+The appliances are the tools that are needed to prepare the food. The appliances can be as simple as a knife or as complex as an oven or a microwave. When following an online recipe or a printed cookbook, these may or may not be provided in a separate section. Some of the common appliances that are used in recipes are:
+- Knife
+- Cutting board
+- Mixing bowl
+- Measuring cups and spoons
+- Skillet
+- Saucepan
+- Oven
+- Microwave
+
+An example of appliances from a `Vegan Chickpea Salad` recipe could be:
+```
+- Knife
+- Cutting board
+- Large bowl
+- Small bowl
+- Whisk
+```
