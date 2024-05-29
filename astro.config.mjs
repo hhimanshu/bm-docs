@@ -25,6 +25,17 @@ export default defineConfig({
           autogenerate: { directory: "features" },
         },
       ],
+      head: [
+        {
+          tag: "script",
+          attrs: {
+            src: "https://plausible.io/js/script.js",
+            'data-domain': "docs.bettermenu.live",
+            async: true,
+            defer: true,
+          },
+        },
+      ],
     }),
   ],
 });
