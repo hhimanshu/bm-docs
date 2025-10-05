@@ -6,9 +6,9 @@ export default defineConfig({
   integrations: [
     starlight({
       title: "BetterMenu Docs",
-      social: {
-        // github: 'https://github.com/bettermenu/documentation',
-      },
+      social: [
+        // { name: 'github', url: 'https://github.com/bettermenu/documentation' },
+      ],
       editLink: {
         baseUrl: "https://github.com/bettermenu/documentation/edit/main",
       },
