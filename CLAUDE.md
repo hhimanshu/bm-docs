@@ -9,15 +9,15 @@ BetterMenu Documentation - An Astro-based documentation site built with Starligh
 ## Commands
 
 ### Development
-- `npm install` - Install dependencies
-- `npm run dev` or `npm start` - Start local dev server at `localhost:4321`
-- `npm run build` - Build production site (runs `astro check` then builds to `./dist/`)
-- `npm run preview` - Preview the built site locally
-- `npm run astro ...` - Run Astro CLI commands (e.g., `astro add`, `astro check`)
+- `bun install` - Install dependencies
+- `bun run dev` or `bun start` - Start local dev server at `localhost:4321`
+- `bun run build` - Build production site (runs `astro check` then builds to `./dist/`)
+- `bun run preview` - Preview the built site locally
+- `bun run astro ...` - Run Astro CLI commands (e.g., `astro add`, `astro check`)
 
 ### Deployment
 - Deployment to Firebase Hosting happens automatically on merge to `main` branch via GitHub Actions
-- The workflow runs `npm ci && npm run build` before deployment
+- The workflow runs `bun install --frozen-lockfile && bun run build` before deployment
 - Build output directory is `dist/` (configured in `firebase.json`)
 
 ## Architecture
