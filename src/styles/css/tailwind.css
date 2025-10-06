@@ -1,0 +1,10 @@
+/* All @import statements must come first */
+@import 'tailwindcss';
+@import '@astrojs/starlight-tailwind';
+@import './base.css';
+
+/* Tailwind plugins */
+@plugin '@tailwindcss/typography';
+
+/* Layer definitions */
+@layer base, starlight, theme, components, utilities;
