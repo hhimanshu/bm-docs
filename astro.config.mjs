@@ -1,11 +1,14 @@
 import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
+import starlightLlmsTxt from "starlight-llms-txt";
 
 // https://astro.build/config
 export default defineConfig({
+  site: "https://docs.bettermenu.live",
   integrations: [
     starlight({
       title: "BetterMenu Docs",
+      plugins: [starlightLlmsTxt()],
       social: [
         // { name: 'github', url: 'https://github.com/bettermenu/documentation' },
       ],
