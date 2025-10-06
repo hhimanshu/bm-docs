@@ -1,5 +1,4 @@
 ## Next
-- [ ] Integrate Posthog Web Analytics
 - [ ] Ability to add diagrams (animated better)
 - [ ] API Versioning documentation (read how OpenAI, Anthropic do it)
   - https://docs.claude.com/en/api/versioning
