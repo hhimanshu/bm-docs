@@ -12,9 +12,16 @@
   "dependencies": {
     "@astrojs/check": "^0.9.4",
     "@astrojs/starlight": "^0.36.0",
+    "@astrojs/starlight-tailwind": "^4.0.1",
+    "@tailwindcss/postcss": "^4.1.14",
+    "@tailwindcss/typography": "^0.5.19",
+    "@tailwindcss/vite": "^4.1.14",
     "astro": "^5.14.1",
     "firebase-tools": "^14.18.0",
     "sharp": "^0.34.4",
+    "starlight-llms-txt": "^0.6.0",
+    "starlight-sidebar-topics": "^0.6.1",
+    "tailwindcss": "^4.1.14",
     "typescript": "^5.9.3"
   }
 }

@@ -1,0 +1,268 @@
+---
+title: Recipe Endpoints
+description: Create, read, update, and delete recipes using the BetterMenu API.
+---
+
+import { Aside, Code, Tabs, TabItem } from '@astrojs/starlight/components';
+
+Manage recipes programmatically using the BetterMenu Recipe API.
+
+## Create Recipe
+
+Create a new recipe with ingredients and instructions.
+
+### Endpoint
+
+```http
+POST /v1/recipes
+```
+
+### Headers
+
+```http
+Authorization: Bearer YOUR_API_KEY
+Content-Type: application/json
+```
+
+### Request Body
+
+```json
+{
+  "name": "Classic Margherita Pizza",
+  "description": "A traditional Italian pizza with fresh mozzarella, tomatoes, and basil",
+  "servings": 4,
+  "prepTime": 20,
+  "cookTime": 15,
+  "ingredients": [
+    {
+      "ingredientId": "ing_123",
+      "quantity": 500,
+      "unit": "g",
+      "notes": "Pizza dough"
+    },
+    {
+      "ingredientId": "ing_456",
+      "quantity": 200,
+      "unit": "g",
+      "notes": "Fresh mozzarella"
+    },
+    {
+      "ingredientId": "ing_789",
+      "quantity": 150,
+      "unit": "g",
+      "notes": "Tomato sauce"
+    }
+  ],
+  "instructions": [
+    "Preheat oven to 475°F (245°C)",
+    "Roll out the pizza dough on a floured surface",
+    "Spread tomato sauce evenly over the dough",
+    "Add fresh mozzarella cheese",
+    "Bake for 12-15 minutes until crust is golden",
+    "Garnish with fresh basil leaves"
+  ],
+  "tags": ["italian", "vegetarian", "pizza"]
+}
+```
+
+### Response
+
+```json
+{
+  "id": "recipe_abc123",
+  "accountId": "acc_xyz789",
+  "name": "Classic Margherita Pizza",
+  "description": "A traditional Italian pizza with fresh mozzarella, tomatoes, and basil",
+  "servings": 4,
+  "prepTime": 20,
+  "cookTime": 15,
+  "totalTime": 35,
+  "ingredients": [
+    {
+      "id": "ri_001",
+      "ingredientId": "ing_123",
+      "ingredient": {
+        "id": "ing_123",
+        "name": "Pizza Dough",
+        "category": "bakery"
+      },
+      "quantity": 500,
+      "unit": "g",
+      "notes": "Pizza dough"
+    }
+  ],
+  "instructions": [
+    "Preheat oven to 475°F (245°C)",
+    "Roll out the pizza dough on a floured surface",
+    "Spread tomato sauce evenly over the dough",
+    "Add fresh mozzarella cheese",
+    "Bake for 12-15 minutes until crust is golden",
+    "Garnish with fresh basil leaves"
+  ],
+  "nutritionFacts": {
+    "servingSize": "1 slice",
+    "servingsPerRecipe": 4,
+    "calories": 285,
+    "totalFat": 12,
+    "saturatedFat": 6,
+    "cholesterol": 30,
+    "sodium": 650,
+    "totalCarbohydrates": 32,
+    "dietaryFiber": 2,
+    "sugars": 3,
+    "protein": 12
+  },
+  "allergens": ["wheat", "milk"],
+  "tags": ["italian", "vegetarian", "pizza"],
+  "createdAt": "2025-10-06T22:20:00Z",
+  "updatedAt": "2025-10-06T22:20:00Z"
+}
+```
+
+### Status Codes
+
+| Code | Description |
+|------|-------------|
+| `201` | Recipe created successfully |
+| `400` | Bad request - Invalid input |
+| `401` | Unauthorized - Invalid API key |
+| `422` | Unprocessable entity - Validation failed |
+| `429` | Too many requests - Rate limit exceeded |
+| `500` | Internal server error |
+
+<Aside type="tip">
+The nutrition facts are automatically calculated based on the ingredients and their quantities. You can override these values by including a `nutritionFacts` object in your request.
+</Aside>
+
+## Get Recipe
+
+Retrieve a specific recipe by ID.
+
+### Endpoint
+
+```http
+GET /v1/recipes/{recipeId}
+```
+
+### Response
+
+Returns the recipe object with all details including ingredients and nutrition facts.
+
+## Update Recipe
+
+Update an existing recipe.
+
+### Endpoint
+
+```http
+PATCH /v1/recipes/{recipeId}
+```
+
+### Request Body
+
+Include only the fields you want to update.
+
+```json
+{
+  "name": "Updated Recipe Name",
+  "servings": 6
+}
+```
+
+## Delete Recipe
+
+Delete a recipe permanently.
+
+### Endpoint
+
+```http
+DELETE /v1/recipes/{recipeId}
+```
+
+### Response
+
+```json
+{
+  "id": "recipe_abc123",
+  "deleted": true
+}
+```
+
+<Aside type="caution">
+Deleting a recipe is permanent and cannot be undone. Consider archiving recipes instead if you need to preserve historical data.
+</Aside>
+
+## List Recipes
+
+Get a paginated list of all recipes.
+
+### Endpoint
+
+```http
+GET /v1/recipes
+```
+
+### Query Parameters
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `limit` | integer | Number of recipes per page (default: 20, max: 100) |
+| `offset` | integer | Number of recipes to skip |
+| `search` | string | Search recipes by name or description |
+| `tags` | string | Filter by tags (comma-separated) |
+| `sortBy` | string | Sort field: `name`, `createdAt`, `updatedAt` |
+| `order` | string | Sort order: `asc` or `desc` |
+
+### Example Request
+
+```http
+GET /v1/recipes?limit=10&search=pizza&tags=italian,vegetarian&sortBy=createdAt&order=desc
+```
+
+### Response
+
+```json
+{
+  "data": [
+    {
+      "id": "recipe_abc123",
+      "name": "Classic Margherita Pizza",
+      "description": "A traditional Italian pizza...",
+      "servings": 4,
+      "totalTime": 35,
+      "tags": ["italian", "vegetarian", "pizza"],
+      "createdAt": "2025-10-06T22:20:00Z"
+    }
+  ],
+  "pagination": {
+    "limit": 10,
+    "offset": 0,
+    "total": 42,
+    "hasMore": true
+  }
+}
+```
+
+## Error Handling
+
+All endpoints return consistent error responses:
+
+```json
+{
+  "error": {
+    "code": "validation_error",
+    "message": "Invalid request parameters",
+    "details": [
+      {
+        "field": "servings",
+        "message": "Must be a positive integer"
+      }
+    ]
+  }
+}
+```
+
+## Related Endpoints
+
+- [Ingredient Endpoints](/api/ingredients/) - Manage ingredients
+- [Nutrition Endpoints](/api/nutrition/) - Calculate nutrition facts

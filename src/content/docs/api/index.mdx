@@ -1,0 +1,53 @@
+---
+title: API Reference
+description: API reference and integration guides for building with BetterMenu.
+---
+
+import { Card, CardGrid, LinkCard } from '@astrojs/starlight/components';
+
+Welcome to the BetterMenu API documentation. Build powerful integrations with BetterMenu's RESTful API.
+
+## Getting Started
+
+<CardGrid>
+	<Card title="Authentication" icon="star">
+		Learn how to authenticate your API requests using API keys and OAuth.
+	</Card>
+	<Card title="Rate Limits" icon="warning">
+		Understand API rate limits and best practices for making requests.
+	</Card>
+	<Card title="Webhooks" icon="send">
+		Set up webhooks to receive real-time updates from BetterMenu.
+	</Card>
+	<Card title="SDKs" icon="seti:config">
+		Use our official SDKs for JavaScript, Python, and other languages.
+	</Card>
+</CardGrid>
+
+## API Endpoints
+
+<CardGrid>
+	<LinkCard
+		title="Recipe Endpoints"
+		href="/api/recipes/"
+		description="Create, read, update, and delete recipes programmatically."
+	/>
+	<LinkCard
+		title="Ingredient Endpoints"
+		href="/api/ingredients/"
+		description="Manage ingredients and their nutritional information."
+	/>
+	<LinkCard
+		title="Nutrition Endpoints"
+		href="/api/nutrition/"
+		description="Calculate nutrition facts and validate claims."
+	/>
+</CardGrid>
+
+## Base URL
+
+```
+https://api.bettermenu.live/v1
+```
+
+All API requests should be made to this base URL with the appropriate endpoint path.
