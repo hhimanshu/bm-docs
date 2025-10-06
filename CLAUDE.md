@@ -11,6 +11,7 @@ BetterMenu Documentation - An Astro-based documentation site built with Starligh
 - Astro (github: withastro/astro)
 - Bun (github: oven-sh/bun)
 - Tailwind CSS (github: tailwindlabs/tailwindcss)
+- Posthog (github: posthog/posthog)
 
 ## Development Guidelines
 ### For any conversation with claude, use the following rules:
