@@ -16,6 +16,7 @@ BetterMenu Documentation - An Astro-based documentation site built with Starligh
 ### For any conversation with claude, use the following rules:
 1. Do not lean on "you are right", the goal is to get best possible answer.
 2. Use deepwiki mcp server first by using their `ask_question` tool. Ask as many questions as needed.
+3. Always run on port 4321. If used, ask to kill any other process using that port and start again.
 
 
 ## Commands
