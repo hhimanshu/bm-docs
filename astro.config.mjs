@@ -1,6 +1,7 @@
 import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
 import starlightLlmsTxt from "starlight-llms-txt";
+import starlightSidebarTopics from "starlight-sidebar-topics";
 
 // https://astro.build/config
 export default defineConfig({
@@ -8,7 +9,35 @@ export default defineConfig({
   integrations: [
     starlight({
       title: "BetterMenu Docs",
-      plugins: [starlightLlmsTxt()],
+      plugins: [
+        starlightLlmsTxt(),
+        starlightSidebarTopics([
+          {
+            label: "Concepts",
+            link: "/concepts/account/",
+            icon: "open-book",
+            items: [
+              { label: "Concepts", autogenerate: { directory: "concepts" } },
+            ],
+          },
+          {
+            label: "Product",
+            link: "/product/",
+            icon: "rocket",
+            items: [
+              { label: "Product", autogenerate: { directory: "product" } },
+            ],
+          },
+          {
+            label: "API",
+            link: "/api/",
+            icon: "seti:json",
+            items: [
+              { label: "API", autogenerate: { directory: "api" } },
+            ],
+          },
+        ]),
+      ],
       social: [
         // { name: 'github', url: 'https://github.com/bettermenu/documentation' },
       ],
@@ -21,13 +50,6 @@ export default defineConfig({
         alt: "BetterMenu Documentation Logo",
         replacesTitle: true,
       },
-      sidebar: [
-        { label: "Concepts", autogenerate: { directory: "concepts" } },
-        {
-          label: "Features",
-          autogenerate: { directory: "features" },
-        },
-      ],
       head: [
         {
           tag: "script",

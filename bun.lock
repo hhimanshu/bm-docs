@@ -14,6 +14,7 @@
         "firebase-tools": "^14.18.0",
         "sharp": "^0.34.4",
         "starlight-llms-txt": "^0.6.0",
+        "starlight-sidebar-topics": "^0.6.1",
         "tailwindcss": "^4.1.14",
         "typescript": "^5.9.3",
       },
@@ -1781,6 +1782,8 @@
     "stack-trace": ["stack-trace@0.0.10", "", {}, "sha512-KGzahc7puUKkzyMt+IqAep+TVNbKP+k2Lmwhub39m1AsTSkaDutx56aDCo+HLDzf/D26BIHTJWNiTG1KAJiQCg=="],
 
     "starlight-llms-txt": ["starlight-llms-txt@0.6.0", "", { "dependencies": { "@astrojs/mdx": "^4.0.5", "@types/hast": "^3.0.4", "@types/micromatch": "^4.0.9", "github-slugger": "^2.0.0", "hast-util-select": "^6.0.3", "micromatch": "^4.0.8", "rehype-parse": "^9.0.1", "rehype-remark": "^10.0.0", "remark-gfm": "^4.0.0", "remark-stringify": "^11.0.0", "unified": "^11.0.5", "unist-util-remove": "^4.0.0" }, "peerDependencies": { "@astrojs/starlight": ">=0.31", "astro": "^5.1.6" } }, "sha512-mKkRPlGZ+kKJlnclXkW3s+RSVF/10Ct2BsQ4dYDaK8j4h/L55WbZCds1PsqQiLYPrDp7wIN6gm7LYsrUlGaBjQ=="],
+
+    "starlight-sidebar-topics": ["starlight-sidebar-topics@0.6.1", "", { "dependencies": { "picomatch": "^4.0.2" }, "peerDependencies": { "@astrojs/starlight": ">=0.32.0" } }, "sha512-kBOFUTJEVVeeZ3t0la8V+of0JyahAYGPT0xacXl/qZ6poBwqKu0mR2qPv7D/ZdUVTxGuQghT2AXo3qo0ygXwjA=="],
 
     "statuses": ["statuses@2.0.1", "", {}, "sha512-RwNA9Z/7PrK06rYLIzFMlaF+l73iwpzsqRIFgbMLbTcLD6cOao82TaWefPXQvB2fOC4AjuYSEndS7N/mTCbkdQ=="],
 
