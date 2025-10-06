@@ -64,15 +64,24 @@
     box-sizing: border-box;
   }
 
-  /* Make logo responsive */
-  .site-title img {
-    max-width: 100%;
-    height: auto;
-    width: auto;
-  }
-
   /* Hide scrollbar for inert elements */
   [inert] ::-webkit-scrollbar {
     display: none;
+  }
+}
+
+@layer theme {
+  /* Logo size control - must be in theme layer to override Starlight's styles */
+  .site-title img {
+    max-width: 180px !important;
+    height: auto !important;
+    width: auto !important;
+  }
+
+  /* On smaller screens, allow logo to scale down */
+  @media (max-width: 50rem) {
+    .site-title img {
+      max-width: 150px !important;
+    }
   }
 }
