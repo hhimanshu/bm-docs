@@ -5,8 +5,6 @@ latest_version: "v0.4.3"
 latest_release_date: "October 14, 2025"
 ---
 
-# BetterMenu Developer Platform
-
 Follow along with updates to the BetterMenu API, SDKs, and developer tools.
 
 ---
