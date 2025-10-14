@@ -1,15 +1,30 @@
 ---
 title: "BetterMenu Developer Platform"
 description: "Release notes for the BetterMenu Developer Platform - API, SDKs, and developer tools"
-latest_version: "v0.4.3"
+latest_version: "v0.4.5"
 latest_release_date: "October 14, 2025"
 ---
 
-# BetterMenu Developer Platform
+---
 
-Follow along with updates to the BetterMenu API, SDKs, and developer tools.
+## October 14, 2025
+
+### Bug Fixes
+
+- Fixed workflow to preserve H1 heading and intro text
+- Correctly prepends new releases after header section
+- Maintains proper document structure
+
+### Testing
+
+- Validated header preservation logic
+- Confirmed date-based sections remain chronological
+
+
+**[View release v0.4.5 on GitHub](https://github.com/hhimanshu/bm-be/releases/tag/v0.4.5)**
 
 ---
+
 
 ## October 14, 2025
 
