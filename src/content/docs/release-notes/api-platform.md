@@ -1,13 +1,33 @@
 ---
 title: "BetterMenu Developer Platform"
 description: "Release notes for the BetterMenu Developer Platform - API, SDKs, and developer tools"
-latest_version: "v0.4.3"
+latest_version: "v0.4.7"
 latest_release_date: "October 14, 2025"
 ---
 
 Follow along with updates to the BetterMenu API, SDKs, and developer tools.
 
 ---
+
+## October 14, 2025
+
+### Final Testing
+
+- Removed duplicate H1 heading from workflow
+- Starlight now renders title from frontmatter only
+- Document structure clean and proper
+
+### Verification
+
+- No duplicate headings
+- TOC properly generated
+- All sections properly formatted
+
+
+**[View release v0.4.7 on GitHub](https://github.com/hhimanshu/bm-be/releases/tag/v0.4.7)**
+
+---
+
 
 ## October 14, 2025
 
