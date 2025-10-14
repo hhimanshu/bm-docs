@@ -36,6 +36,20 @@ export default defineConfig({
               { label: "API", autogenerate: { directory: "api" } },
             ],
           },
+          {
+            label: "Release Notes",
+            link: "/release-notes/",
+            icon: "document",
+            items: [
+              {
+                label: "Release Notes",
+                items: [
+                  { label: "Overview", link: "/release-notes/" },
+                  { label: "BetterMenu Developer Platform", link: "/release-notes/api-platform/" },
+                ],
+              },
+            ],
+          },
         ]),
       ],
       social: [
